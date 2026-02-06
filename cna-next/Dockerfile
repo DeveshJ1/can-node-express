@@ -1,7 +1,7 @@
 FROM node:lts-bookworm-slim AS base
 RUN apt-get update && apt-get install -y libssl-dev ca-certificates 
 WORKDIR /app
-COPY package.json package-lock.json ./
+COPY package.json yarn.lock ./
 FROM base AS build
 RUN export NODE_ENV=production
 RUN yarn
