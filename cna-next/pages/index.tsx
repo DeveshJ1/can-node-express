@@ -7,13 +7,13 @@ declare global {
   }
 }
 
-import { prisma } from '../lib/prisma';
 import Inventory,{ InventoryProps } from "../components/Inventory";
 import Layout from "../components/Layout"
 
 export const getServerSideProps = async () => {
-  const inventoryrecs = await prisma.inventory.findMany({
-  })
+  const { prisma } = await import ('../lib/prisma')
+
+  const inventoryrecs = await prisma.inventory.findMany({})
   return { props: { inventoryrecs: JSON.parse(JSON.stringify(inventoryrecs)) } }
 }
 

@@ -1,10 +1,10 @@
 const express = require('express')
-const port = process.env.PORT ǁ 8080
+const port = process.env.PORT || 8080
 const app = express()
 app.use(express.json())
 app.listen(port, () => console.log('Sample app is listening on port ${port}!'))
 const Sequelize = require('sequelize')
-const sequelize = new Sequelize('postgres://Student%40<cc-hw1>:Pa55w0rd1234@<cc-hw1>.postgres.database.azure.com:5432/cnainventory')
+const sequelize = new Sequelize('postgres://Student:Pa55w0rd1234@cc-hw1.postgres.database.azure.com:5432/cnainventory')
 sequelize
 .authenticate()
 .then(() => {

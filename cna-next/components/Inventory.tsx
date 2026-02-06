@@ -1,4 +1,3 @@
-
 import React from "react";
 
 export type InventoryProps = {
@@ -8,11 +7,11 @@ export type InventoryProps = {
   date: string;
 };
 
-constInventory: React.FC<{ inventoryrec: InventoryProps }>=({ inventoryrec})=> {return(
+const Inventory: React.FC<{ inventoryrec: InventoryProps }> =({ inventoryrec})=> {return(
   <div
   className="flex bg-white shadow-lg rounded-lg mx-2 md:mx-auto mb-5 max-w-2xl"
   >
-  <divclassName="flex items-start px-4 py-3">
+  <div className="flex items-start px-4 py-3">
     <div className="">
       <div className="inline items-center justify-between">
         <p className="text-gray-700 text-sm">
@@ -24,7 +23,6 @@ constInventory: React.FC<{ inventoryrec: InventoryProps }>=({ inventoryrec})=> {
       </div>
     </div>
   </div>
-</div>
 </div>
 );
 };
